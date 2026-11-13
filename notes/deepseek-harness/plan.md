@@ -43,15 +43,18 @@ flowchart TD
 
 | 阶段 | 做什么 | 主资料 | 备选 |
 |---|---|---|---|
-| 0 | npx @deepseek-ai/dsh web 跑通，读拆机 01 建立五层模型 | 拆机 01 · EP16 简版 | dsh-notes 01 |
+| 0 | npx @deepseek-ai/dsh web 跑通，读拆机 01 建立五层模型，走读一次完整流转（启动装配→输入→回复→收尾，动态广度图） | 拆机 01 · EP16 简版 | dsh-notes 01 |
 | 1 | 读拆机 02，跟着手写迷你 Cordis | 拆机 02 | dshx Cordis 内核 |
 | 2 | 循环→日志→提示词→工具，逐行走读 | dsh-notes 04→05→06→07 | deep-dive Ch06-10 |
 | 3 | 挑一个 seam 看穿 Definition/Provider/Consumer 三角色；沙箱、压缩各过一遍 | dsh-notes 08→09→10 | deep-dive Ch11-14 |
 | 4 | 编排与对外接口，通读 | dsh-notes 11→12 | deep-dive Ch15 |
 | 5 | dshx 8 个 Demo；照官方 cookbook 写一个真插件 | dshx Demo 1-8 · docs/cookbook/adding-a-tool | — |
+| 6 | 工程化与质量专题：开发规范与门禁、ADR 与设计决策志、事故复盘与不变量、测试策略与防御性模式；专题串联：异常恢复全景、记忆现状核实（会话持久化 + MCP 外挂） | deep-dive Part VI/VII · dshx 插件开发与事故复盘 | — |
 
 读每个包记录三件事：提供什么服务 / 依赖什么服务 / 卸载清理什么。
 验证习惯：dsh --dump-config 把插件树打出来，对照 patch 层看。
+
+学习方法（2026-11-13 用户确认调整）：静态结构（五层模型）→ 动态流转（完整旅程广度走读，前置在阶段 0）→ 逐部件深度拆解（从 Cordis 开始）。
 
 ## 003 资料清单
 
